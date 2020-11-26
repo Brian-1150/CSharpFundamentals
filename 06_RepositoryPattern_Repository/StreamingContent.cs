@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _06_RepositoryPattern_Repository
-{
+namespace _06_RepositoryPattern_Repository {
     public enum GenreType {
         Horror = 1,
         RomCom,
         SciFi,
         Documentary,
         Bromance,
-        Drama, 
-        Action
+        Drama,
+        Action,
+        Comedy
     }
     //Plain Old C# Object  -- POCO
     public class StreamingContent {
@@ -24,17 +24,19 @@ namespace _06_RepositoryPattern_Repository
         public bool IsFamilyFriendly { get; set; }
         public GenreType TypeOfGenre { get; set; }
 
-        public StreamingContent() { }
-        public StreamingContent(string title, string description, string maturityRating, 
-            double starRating, bool isFamilyFriendly, GenreType genre ) {
+        public StreamingContent() { } //Constructors
+        public StreamingContent(string title, string description, string maturityRating,
+            double starRating, bool isFamilyFriendly, GenreType genre) {
             Title = title;
             Description = description;
             MaturityRating = maturityRating;
             StarRating = starRating;
             IsFamilyFriendly = isFamilyFriendly;
             TypeOfGenre = genre;
-
-
+        }
+        public StreamingContent(string title, string description) {
+            Title = title;
+            Description = description;
         }
     }
 }
