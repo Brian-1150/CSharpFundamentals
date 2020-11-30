@@ -8,7 +8,7 @@ namespace _06_RepositoryPattern_Repository {
     public class StreamingContentRepository {
 
         private List<StreamingContent> _listOfContent = new List<StreamingContent>();  //This is called a field *underscore means field
-       /* public List<StreamingContent> ListOfContent { get; set; } */  //this was just an example to show differnce in naming field vs prop
+        /* public List<StreamingContent> ListOfContent { get; set; } */  //this was just an example to show differnce in naming field vs prop
 
         //Create
         public void AddContentToList(StreamingContent content) {
@@ -35,7 +35,7 @@ namespace _06_RepositoryPattern_Repository {
                 oldContent.StarRating = newContent.StarRating;
                 oldContent.TypeOfGenre = newContent.TypeOfGenre;
                 return true;
-            } 
+            }
             else {
                 return false;
             }
@@ -56,7 +56,7 @@ namespace _06_RepositoryPattern_Repository {
                 return false;
             }
         }
- //Helper method
+        //Helper method
         public StreamingContent GetContentByTitle(string title) {
             foreach (StreamingContent content in _listOfContent) {
                 if (content.Title.ToLower() == title.ToLower()) {
